@@ -92,5 +92,5 @@ export const paths = [
     {
         path: '/bookings',
         method: 'GET'
-    },
+    }
 ];
