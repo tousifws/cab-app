@@ -9,7 +9,11 @@ module.exports = {
                 type: 'sedan',
                 status: 'open',
                 registration_no: 'IN001 4589',
-                location: 'POINT(-122.35900 47.65129)',
+                location: Sequelize.fn(
+                    'ST_GeomFromText',
+                    'POINT(52.458415 16.904740)',
+                    4326
+                ),
                 user_id: 1
             },
             {
@@ -17,7 +21,11 @@ module.exports = {
                 type: 'sedan',
                 status: 'open',
                 registration_no: 'IN001 4579',
-                location: 'POINT(-122.35900 47.65129)',
+                location: Sequelize.fn(
+                    'ST_GeomFromText',
+                    'POINT(52.458415 16.904740)',
+                    4326
+                ),
                 user_id: 2
             }
         ];

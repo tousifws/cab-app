@@ -7,5 +7,5 @@ CREATE TABLE cars
      location        GEOMETRY NOT NULL SRID 4326, 
      registration_no  VARCHAR(32) NOT NULL UNIQUE,
      user_id         INT NOT NULL
-   --   CONSTRAINT cars_user_id_fk FOREIGN KEY (user_id) REFERENCES users (id) ON UPDATE CASCADE 
+     CONSTRAINT cars_user_id_fk FOREIGN KEY (user_id) REFERENCES users (id) ON UPDATE CASCADE 
   ); 

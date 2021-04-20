@@ -5,31 +5,45 @@ module.exports = {
          */
         const data = [
             {
-                model: 'Tesla Model S',
-                status: 'open',
-                initial_location: "GeomFromText('POINT(-122.35900 47.65129)')",
-                final_location: "GeomFromText('POINT(-122.35900 47.65129)')",
+                status: 'completed',
+                initial_location: Sequelize.fn(
+                    'ST_GeomFromText',
+                    'POINT(52.458415 16.904740)',
+                    4326
+                ),
+                final_location: Sequelize.fn(
+                    'ST_GeomFromText',
+                    'POINT(52.458415 16.904740)',
+                    4326
+                ),
                 amount: 200,
                 car_id: 1,
                 user_id: 3
             },
             {
-                model: 'Tesla Model 3',
-                type: 'sedan',
-                initial_location: "GeomFromText('POINT(-122.35900 47.65129)')",
-                final_location: "GeomFromText('POINT(-122.35900 47.65129)')",
+                status: 'completed',
+                initial_location: Sequelize.fn(
+                    'ST_GeomFromText',
+                    'POINT(52.458415 16.904740)',
+                    4326
+                ),
+                final_location: Sequelize.fn(
+                    'ST_GeomFromText',
+                    'POINT(52.458415 16.904740)',
+                    4326
+                ),
                 amount: 100,
                 car_id: 2,
                 user_id: 4
             }
         ];
-        await queryInterface.bulkInsert('cars', data, {});
+        await queryInterface.bulkInsert('bookings', data, {});
     },
 
     down: async (queryInterface, Sequelize) => {
         /**
          * Add commands to revert seed here.
          */
-        await queryInterface.bulkDelete('cars', null, {});
+        await queryInterface.bulkDelete('bookings', null, {});
     }
 };
