@@ -12,6 +12,18 @@ module.exports = {
                 last_name: 'mac',
                 email: 'mac@wednesday.is',
                 oauth_client_id: 2
+            },
+            {
+                first_name: 'Bill',
+                last_name: 'Gates',
+                email: 'bill@gates.io',
+                oauth_client_id: 3
+            },
+            {
+                first_name: 'Elon',
+                last_name: 'Mask',
+                email: 'elon@musk.io',
+                oauth_client_id: 4
             }
         ];
         return queryInterface.bulkInsert('users', arr, {});
