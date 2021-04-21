@@ -7,6 +7,8 @@ CREATE TABLE bookings
      amount          INT NOT NULL,
      user_id         INT NOT NULL,
      car_id          INT NOT NULL,
-     FOREIGN KEY (user_id) REFERENCES users (id) ON UPDATE CASCADE,
-     FOREIGN KEY (car_id) REFERENCES cars (id) ON UPDATE CASCADE  
+     created_at      DATETIME DEFAULT CURRENT_TIMESTAMP,
+     updated_at      DATETIME ON UPDATE CURRENT_TIMESTAMP, 
+     CONSTRAINT bookings_user_id_fk FOREIGN KEY (user_id) REFERENCES users (id) ON UPDATE CASCADE,
+     CONSTRAINT bookings_car_id_fk FOREIGN KEY (car_id) REFERENCES cars (id) ON UPDATE CASCADE  
   ); 

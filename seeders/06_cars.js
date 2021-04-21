@@ -11,7 +11,7 @@ module.exports = {
                 registration_no: 'IN001 4589',
                 location: Sequelize.fn(
                     'ST_GeomFromText',
-                    'POINT(52.458415 16.904740)',
+                    'POINT(73.90190283936099 18.467768408702344)',
                     4326
                 ),
                 user_id: 1
@@ -23,7 +23,7 @@ module.exports = {
                 registration_no: 'IN001 4579',
                 location: Sequelize.fn(
                     'ST_GeomFromText',
-                    'POINT(52.458415 16.904740)',
+                    'POINT(73.91022841611681 18.47509520428877)',
                     4326
                 ),
                 user_id: 2
