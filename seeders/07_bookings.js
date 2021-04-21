@@ -33,7 +33,7 @@ module.exports = {
                     4326
                 ),
                 amount: 200,
-                car_id: 3,
+                car_id: 1,
                 user_id: 4
             }
         ];

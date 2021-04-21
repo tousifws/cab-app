@@ -6,7 +6,7 @@ module.exports = {
             module /* , options */
         )('utils/constants');
 
-        const arr = range(1, 3).map(value => ({
+        const arr = range(1, 5).map(value => ({
             oauth_client_id: value,
             access_token: require('uuid/v4')().replace(/-/g, ''),
             expires_in: 86400,
@@ -14,7 +14,7 @@ module.exports = {
                 scope: {
                     id: value,
                     oauthClientId: value,
-                    scope: value === 1 ? SCOPE_TYPE.USER : SCOPE_TYPE.ADMIN
+                    scope: value === 1 ? SCOPE_TYPE.ADMIN : SCOPE_TYPE.USER
                 },
                 resources:
                     value === 1

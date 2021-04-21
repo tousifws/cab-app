@@ -4,7 +4,7 @@ const { OAUTH_CLIENT_ID } = require('esm')(module /* , options */)(
 );
 module.exports = {
     up: queryInterface => {
-        const arr = range(1, 3).map(value => ({
+        const arr = range(1, 5).map(value => ({
             oauth_client_id: 3,
             resource_type: OAUTH_CLIENT_ID,
             resource_id: value
