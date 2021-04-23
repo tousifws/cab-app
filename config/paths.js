@@ -76,5 +76,30 @@ export const paths = [
         ],
         method: 'GET',
         customValidator: async payload => await hasScopeOverUser(payload)
+    },
+    {
+        path: '/users/signup',
+        scopes: [SCOPE_TYPE.ADMIN, SCOPE_TYPE.USER],
+        method: 'POST'
+    },
+    {
+        path: '/cars',
+        method: 'POST',
+        scopes: [SCOPE_TYPE.ADMIN, SCOPE_TYPE.USER]
+    },
+    {
+        path: '/cars',
+        method: 'GET',
+        scopes: [SCOPE_TYPE.ADMIN, SCOPE_TYPE.USER]
+    },
+    {
+        path: '/bookings',
+        method: 'POST',
+        scopes: [SCOPE_TYPE.ADMIN, SCOPE_TYPE.USER]
+    },
+    {
+        path: '/bookings',
+        method: 'GET',
+        scopes: [SCOPE_TYPE.ADMIN, SCOPE_TYPE.USER]
     }
 ];

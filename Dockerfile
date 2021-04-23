@@ -6,4 +6,4 @@ RUN apk update && apk add git
 RUN yarn
 
 CMD ["sh", "./migrate-and-run.sh"]
-EXPOSE 9000
+EXPOSE 8000
